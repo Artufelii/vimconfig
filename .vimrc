@@ -2,7 +2,7 @@ set number
 set mouse=a
 set numberwidth=1
 set clipboard=unnamed
-syntax on 
+syntax on
 set showcmd
 set ruler
 set cursorline
@@ -13,6 +13,7 @@ set relativenumber
 set laststatus=2
 set noshowmode
 set updatetime=250
+filetype plugin on
 
 call plug#begin('~/.vim/plugged')
 
@@ -21,11 +22,15 @@ Plug 'morhetz/gruvbox'
 
 "IDE
 Plug 'easymotion/vim-easymotion'
+Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -37,6 +42,9 @@ Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
 Plug 'mlaursen/vim-react-snippets'
@@ -49,9 +57,9 @@ let g:gruvbox_contrast_dark = "hard"
 let g:deoplete#enable_at_startup = 1
 let g:jsx_ext_required = 0
 "let g:coc_global_extensions = ['coc-tslint-plugin',  'coc-css', 'coc-json', 'coc-tsserver', 'coc-html', 'coc-prettier', 'coc-python', 'coc-pyright']
-"let g:airline#extensions#tabline#enabled = 1  
-"let g:airline#extensions#tabline#fnamemod = ':t' 
-"let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_powerline_fonts = 1
 let g:jedi#completions_enabled = 0
 let g:airline_theme='wombat'
 let NERDTreeQuitOnOpen=1
@@ -67,6 +75,7 @@ let g:user_emmet_leader_key=','
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:kite_supported_languages = ['*']
 let g:kite_auto_complete=1
+let g:WebDevIconsOS = 'Darwin'
 
 let mapleader=" "
 
